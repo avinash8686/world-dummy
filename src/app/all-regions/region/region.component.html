@@ -1,0 +1,35 @@
+<div class="container">
+
+  <div *ngIf="noRegionData.length > 0">
+    <div class="row text-center">
+      <div class="col-4 mb-5" *ngFor="let country of noRegionData">
+        <div class="card" style="width: 18rem;">
+          <div class="card-body">
+            <h3 class="card-title mb-3">{{ country.name }}</h3>
+            <h5 class="mb-5 font-weight-light">
+              <b>Capital:</b> {{country.capital }}
+            </h5>
+            <a class="btn btn-primary" [routerLink] = "['/country', country.name]" >More..</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+  <div *ngIf="singleRegionData.length > 0">
+    <div class="row text-center">
+      <div class="col-4 mb-5" *ngFor="let country of singleRegionData">
+        <div class="card" style="width: 18rem;">
+          <div class="card-body">
+            <h3 class="card-title mb-3">{{country.name}}</h3>
+            <h5 class="mb-5 font-weight-light"> <b>Capital:</b> {{country.capital }}</h5>
+            <a class="btn btn-primary" [routerLink] = "['/country', country.name]" >More..</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+

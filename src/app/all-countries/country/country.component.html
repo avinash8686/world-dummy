@@ -1,0 +1,17 @@
+<div class="container">
+  <ng-container *ngIf="country.length > 0">
+    <div class="row text-center">
+      <ng-container *ngFor="let country of country">
+        <div class="card" style="width: 18rem;">
+          <div class="card-body">
+            <h3 class="card-title mb-3">{{ country.name }}</h3>
+            <h5 class="mb-5 font-weight-light">
+              <b>Capital:</b> {{country.capital }}
+            </h5>
+            
+          </div>
+        </div>
+      </ng-container>
+    </div>
+  </ng-container>
+</div>

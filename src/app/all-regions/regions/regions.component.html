@@ -1,0 +1,139 @@
+<div class="container main text-center" *ngIf="allRegions.length > 0">
+
+  <div class="row">
+    <ng-container *ngFor="let data of allRegions">
+
+      <ng-container *ngIf="data.region !== 'Polar' && data.region !== 'NoRegion'">
+        <div class="col-4 mb-5 d-flex justify-content-center">
+          <div class="card" style="width: 18rem;">
+            <div class="card-body">
+              <h1 class="card-title">{{data.region}}</h1>
+              <h5 class="mb-5">Countries: {{data.countries.length }}</h5>
+              <a class="btn btn-primary small" [routerLink]="['/region', data.region]">More...</a>
+            </div>
+          </div>
+        </div>
+      </ng-container>
+
+      <ng-container *ngIf='data.region === "Polar"'>
+        <div class="col-12 mb-5 d-flex justify-content-center">
+          <div class="card" style="width: 18rem;">
+            <div class="card-body">
+              <h1 class="card-title">{{data.region}}</h1>
+              <h5 class="mb-5">Countries: {{data.countries.length }}</h5>
+              <a class="btn btn-primary small" [routerLink]="['/region', data.region]">More...</a>
+            </div>
+          </div>
+        </div>
+      </ng-container>
+
+      <ng-container *ngIf="data.region === 'NoRegion'">
+        <div class="col-4 mb-5 d-flex justify-content-center">
+          <div class="card" style="width: 18rem;">
+            <div class="card-body">
+              <h1 class="card-title">{{data.region}}</h1>
+              <h5 class="mb-5">Countries: {{data.countries.length }}</h5>
+              
+              <a class="btn btn-primary small" [routerLink]="['/region', data.region]">More...</a>
+            </div>
+          </div>
+        </div>
+      </ng-container>
+
+    </ng-container>
+  </div>
+
+  <!-- <div class="row mb-5">
+    <div class="col-md-4 d-flex justify-content-center">
+      <div class="card" style="width: 18rem;">
+        <div class="card-body">
+          <h1 class="card-title">Africa</h1><h5>Countries: {{ africaRegion.length}}</h5>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 d-flex justify-content-center">
+      <div class="card" style="width: 18rem;">
+        <div class="card-body">
+          <h1 class="card-title">Americas</h1><h5>Countries: {{ americasRegion.length}}</h5>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 d-flex justify-content-center">
+      <div class="card" style="width: 18rem;">
+        <div class="card-body">
+          <h1 class="card-title">Asia</h1><h5>Countries: {{ asiaRegion.length}}</h5>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row mb-5">
+    <div class="col-12 d-flex justify-content-center">
+      <div class="card" style="width: 18rem;">
+        <div class="card-body">
+          <h1 class="card-title">Europe</h1><h5>Countries: {{ europeRegion.length}}</h5>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="row mb-5">
+    <div class="col-md-4 d-flex justify-content-center">
+      <div class="card" style="width: 18rem;">
+        <div class="card-body">
+          <h1 class="card-title">Oceania</h1><h5>Countries: {{ oceaniaRegion.length}}</h5>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 d-flex justify-content-center">
+      <div class="card" style="width: 18rem;">
+        <div class="card-body">
+          <h1 class="card-title">Polar</h1><h5>Countries: {{ otherRegion.length}}</h5>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 d-flex justify-content-center">
+      <div class="card" style="width: 18rem;">
+        <div class="card-body">
+          <h1 class="card-title">Other</h1><h5>Countries: {{ noRegion.length}}</h5>
+        </div>
+      </div>
+    </div>
+  </div> -->
+
+  <!-- <div class="row"> -->
+    <!-- Iterative div starts here -->
+    
+    
+    
+
+
+    <!-- <ng-container *ngFor="let data of allData">
+      <ng-container *ngIf="data.region === 'Africa'">
+
+        <div class="col-md-4">
+          <div class="card mb-4">
+            <p>{{data.region}}</p>
+            
+            <h5 class="card-header">{{data.name | uppercase}}</h5>
+              <div class="card-body">
+                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                <a href="#" class="btn btn-primary" >Go somewhere</a>
+              </div>
+              <div class="card-footer text-muted">
+                <h6>
+                  <b>Author:</b>  
+                  N/A
+                </h6>
+              </div>
+            </div>
+          </div>
+
+        </ng-container>
+    </ng-container> -->
+    <!-- Iterative div ends here. -->
+  <!-- </div> -->
+</div>
+
+<!-- [routerLink]="['/blog',blog.blogId]" -->
